@@ -1,0 +1,107 @@
+/* *{
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    margin: 0px;
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 33%;
+    font-family: 'Lato', sans-serif;
+}
+.header-div1 {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+}
+.header-div2 {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+}
+.header-div2 input {
+    margin: 5px;
+    font-family: 'Lato', sans-serif;
+
+}
+.body {
+    background-color: rgb(237,242,245);
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+    font-family: 'Lato', sans-serif;
+
+}
+.regs{
+    border-radius: 50px;
+    padding: 5px 15px 5px 15px;
+    color: cornflowerblue;
+    background: aliceblue;
+    font-family: 'Lato', sans-serif;
+
+}
+.submit {
+    margin-top: 2%;
+    width: 35%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 15%;
+    font-family: 'Lato', sans-serif;
+
+}
+.task-text {
+    padding: 5%;
+    font-family: 'Lato', sans-serif;
+
+}
+.date {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    font-family: 'Lato', sans-serif;
+
+}
+.libro{
+    border-radius: 25px;
+    padding: 5px 15px 5px 15px;
+    background: rgb(34, 174, 255);
+    color: white;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.but{
+    border-radius: 25px;
+    padding: 5px 15px 5px 15px;
+    background: rgb(34, 174, 255);
+    color:rgb(255, 255, 255);
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background: #b7c2c9;
+}
+.regist{
+    border-radius: 50px;
+    padding: 5px 15px 5px 15px;
+    background: aliceblue;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+.h1s{
+    display: flex; 
+    justify-content: center;
+}
