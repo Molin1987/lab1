@@ -60,11 +60,11 @@ font-family: "Lato", sans-serif;
     text-transform: uppercase;
 }
 form{
-    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 1300px;
 }
 form input[text]{
     width: 313px;
@@ -277,8 +277,8 @@ main{
 }
 .last-news img{
     padding: 20px;
-    width: 10%;
-    height: 50%;
+    width: 20%;
+    height: 25%;
 }
 .post_img{
     width: 100%;
@@ -311,6 +311,7 @@ a{
 }
 .forms{
     padding-top: 0;
+    width: 1720px;
 }
 
 .pagination{ 
@@ -376,3 +377,10 @@ a{
     border-radius: 5%;
 }
 
+.card{
+    
+}
+
+.img-card{
+
+}

@@ -32,11 +32,13 @@ function date_new($date_old){
 $m_text = $month[substr($date, 3, 2)];
 $publish_date = substr($date, 0,2). " " . $m_text .  " " . substr($date, 6);
 
-$comments_result = mysqli_query($con, "SELECT comments.*, users.name FROM comments INNER JOIN users ON comments.user_id = users.user_id WHERE news_id = $new_id");
+$comments_result = mysqli_query($con, "SELECT comments.*, users.name FROM comments INNER JOIN users ON comments.user_id = users.user_id WHERE news_id = $new_id ORDER BY comment_date DESC");
 $comments = mysqli_fetch_all($comments_result);
 
 $name = isset($_SESSION['username']) ? 
 $_SESSION['name'] : null;
+
+$comments_count = mysqli_num_rows($comments_result);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +60,8 @@ $_SESSION['name'] : null;
     echo "<i>". $publish_date ."</i>"; 
     echo "</div>" 
     ?> 
- <h3 class="mb-3">Комментарии</h3> 
+    
+   <h3>Комментарии  <?= $comments_count ?> <img style="height: 25px;" weight="25px"  src="images/comment.png" alt=""></h3>
     <?php if ($username){?>
         <form action="comment-DB.php" method="post">
     <input type="hidden" name="id_new" value="<?= $new_id ?>">
@@ -80,6 +83,7 @@ $_SESSION['name'] : null;
         <button type="submit" class="btn btn-primary mb-3">Отправить</button>
     </form>
     <?php }?>
+
     <?php if (mysqli_num_rows($comments_result)) {
         foreach ($comments as $comment){ ?> 
         <div class="card text-left"> 

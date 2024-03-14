@@ -1,3 +1,7 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"  
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="  
+    crossorigin="anonymous" referrerpolicy="no-referrer"> 
+</script> 
 <?php
 require "connect.php";
 $query_get_category = "select * from categories"; 
@@ -5,7 +9,13 @@ $categories = mysqli_fetch_all(mysqli_query($con, $query_get_category)) ; sessio
 session_start();
 $username = isset($_SESSION["user_id"]) ? mysqli_fetch_assoc(mysqli_query($con, 'select name from users where user_id =' . $_SESSION["user_id"]))["name"] : false;
 
+$search = isset($_GET["search"]) ? $_GET["search"] : false;
+if ($search) {
+    $query = "SELECT * FROM news WHERE title LIKE '%$search%'";
+    $news = mysqli_query($con, $query);
+}
 $news = mysqli_query($con, "select * from news");
+
 
 
 
@@ -29,7 +39,9 @@ $news = mysqli_query($con, "select * from news");
                     <img src="images/Hamburger menu.png" alt="">
                     <h2>Разделы</h2>   
                 </div>
-                <input type="text" placeholder="Поиск" class="poisk">
+                        <form id="search-form" action="/" method="get"> 
+                            <input class="poisk" type="search" id='search' name="search" placeholder="Поиск"> 
+                        </form> 
                 <div class="vhod">
                     <?php if ($username) { ?>
                         <a href="page.php" class="pers-name"><?= $username ?></a>
@@ -61,8 +73,12 @@ $news = mysqli_query($con, "select * from news");
             echo "<li><a href='/?new=" . $category[0] . "'>$category[1]</a></li>"; 
             } 
         ?>
-
-
-
     </div> 
+    <script>  
+        $('#search-form').on ('keyup', function (e) {  
+            <?php   
+                $searching = isset($_GET['search'])? $_GET['search']: false;   
+                ?>  
+        });
+    </script>
 </main>
