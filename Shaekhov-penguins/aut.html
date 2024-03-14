@@ -1,0 +1,18 @@
+<script>
+let num1 = prompt("Введите первое число:");
+let num2 = prompt("Введите второе число:");
+function findDifference(num1, num2) {
+    if (isNaN(num1) || isNaN(num2)) {
+        return "Ожидаются числовые значения";
+    } else {
+        if (num1 < num2) {
+            return "Разность не может быть отрицательной";
+        } else {
+            return Math.abs(num1 - num2);
+        }
+    }
+}
+
+let result = findDifference(num1, num2);
+console.log(result);
+</script>
