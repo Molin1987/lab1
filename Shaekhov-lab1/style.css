@@ -1,15 +1,15 @@
-/* *{
+*{
     font-family: 'Lato', sans-serif;
-    padding: 0px;
-    margin: 0px;
-} */
+}
+.bg-all{
+    
+}
 
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 33%;
-    font-family: 'Lato', sans-serif;
+    gap: 20%;
 }
 .header-div1 {
     display: flex;
@@ -23,12 +23,9 @@
     align-items: end;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
 }
 .header-div2 input {
     margin: 5px;
-    font-family: 'Lato', sans-serif;
-
 }
 .body {
     background-color: rgb(237,242,245);
@@ -38,70 +35,69 @@
     justify-content: center;
     flex-direction: column;
     width: 55%;
-    font-family: 'Lato', sans-serif;
-
+    border-radius: 10px; 
 }
-.regs{
-    border-radius: 50px;
-    padding: 5px 15px 5px 15px;
-    color: cornflowerblue;
-    background: aliceblue;
-    font-family: 'Lato', sans-serif;
 
-}
-.submit {
-    margin-top: 2%;
-    width: 35%;
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    gap: 15%;
-    font-family: 'Lato', sans-serif;
-
-}
 .task-text {
     padding: 5%;
-    font-family: 'Lato', sans-serif;
-
 }
 .date {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50%;
-    font-family: 'Lato', sans-serif;
-
-}
-.libro{
-    border-radius: 25px;
-    padding: 5px 15px 5px 15px;
-    background: rgb(34, 174, 255);
-    color: white;
-    border: none;
-    font-family: 'Lato', sans-serif;
+    gap: 40%;
 }
 
-.but{
-    border-radius: 25px;
-    padding: 5px 15px 5px 15px;
-    background: rgb(34, 174, 255);
-    color:rgb(255, 255, 255);
-    border: none;
-    font-family: 'Lato', sans-serif;
-}
-body{
-    background: #b7c2c9;
-}
-.regist{
-    border-radius: 50px;
-    padding: 5px 15px 5px 15px;
+.submit-grey{
+    border-radius: 50px; 
+    padding: 5px 15px 5px 15px; 
     background: aliceblue;
-    border: none;
     font-family: 'Lato', sans-serif;
-}
-.h1s{
+    border: none;
+    margin-top: 3%;
     display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 15%; 
+}
+.submit-black{
+    border-radius: 25px; 
+    padding: 5px 15px 5px 15px; 
+    background: rgb(11, 9, 43); 
+    color:rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+    border: none;
+    margin-top: 7%;
+    margin-right: 250px;
+}
+
+.but-all{
+    border-radius: 25px; 
+    padding: 5px 15px 5px 15px; 
+    background: rgb(83, 83, 83); 
+    color:rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+    border: none;
+    margin-top: 1%;
+}
+
+.timer {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+  
+.timer div {
+    padding: 0 5px;
+}
+
+.date1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
 }
