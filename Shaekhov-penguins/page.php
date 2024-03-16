@@ -12,15 +12,6 @@ $user = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM `users` WHERE `user
  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<!-- <div class="page-lichniy-kab">
-		<p class="lichniy-kab">Личный кабинет</p>
-			<p class="text-lichniy-kab">Имя: <?= $name; ?> </p>
-			<p class="text-lichniy-kab">Логин: <?= $login; ?> </p>
-		<div class="btn-exit"><a class="exit-but" href="exit.php">Выйти</a></div>
-
-
-	</div> -->
-
 	<div class="page-lichniy-kab">
 		<p class="lichniy-kab">Личный кабинет</p>
 
